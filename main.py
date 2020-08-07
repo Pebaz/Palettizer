@@ -11,7 +11,7 @@ WIDTH = 640
 HEIGHT = 512
 
 rl.SetConfigFlags(rl.FLAG_WINDOW_RESIZABLE)
-rl.InitWindow(WIDTH, HEIGHT, b'Palettizer')
+rl.InitWindow(WIDTH, HEIGHT, b'Palettizer - Press E To Export Palette')
 rl.SetTargetFPS(30)
 
 while not rl.WindowShouldClose():
