@@ -1,10 +1,10 @@
-import toml, pprint, math
+import toml, pprint, math, sys
 from raylib.dynamic import raylib as rl, ffi
 from raylib.colors import *
 
 TILE_SIZE = 64
 
-colors = toml.load(open('palettes/painting.toml'))
+colors = toml.load(open((sys.argv[1:] or ['palettes/painting.toml'])[0]))
 pprint.pprint(colors)
 
 WIDTH = 640
@@ -25,7 +25,7 @@ while not rl.WindowShouldClose():
         x += TILE_SIZE
         if x > WIDTH:
             x = 0
-            y += 1
+            y += TILE_SIZE
     
     rl.EndDrawing()
 
