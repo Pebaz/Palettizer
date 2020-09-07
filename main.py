@@ -1,6 +1,7 @@
 import toml, pprint, math, sys
 from raylib.dynamic import raylib as rl, ffi
 from raylib.colors import *
+from haishoku.haishoku import Haishoku
 
 TILE_SIZE = 64
 
@@ -14,7 +15,20 @@ rl.SetConfigFlags(rl.FLAG_WINDOW_RESIZABLE)
 rl.InitWindow(WIDTH, HEIGHT, b'Palettizer - Press E To Export Palette')
 rl.SetTargetFPS(30)
 
+def get_dropped_files():
+    files = []
+    if rl.IsFileDropped():
+        file_count = ffi.new('int *')
+        files = rl.GetDroppedFiles(file_count)
+        files = [ffi.string(files[i]).decode() for i in range(file_count[0])]
+        rl.ClearDroppedFiles()
+    return files
+
 while not rl.WindowShouldClose():
+    for file in get_dropped_files():
+        h = Haishoku.loadHaishoku(file)
+        colors = {str(blob) : blob[1] for blob in h.palette}
+
     rl.BeginDrawing()
     rl.ClearBackground(WHITE)
 
