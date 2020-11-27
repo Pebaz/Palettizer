@@ -1,0 +1,42 @@
+# Tales of Harrowood Color Palette
+# Samuel & Ashley Wilder 11/27/2020
+# Assumes a 2-tone shading scheme in most cases
+
+LightYellow = [250, 236, 140]
+ShadeYellow = [240, 202, 129]
+
+LightBrown = [164, 138, 123]
+ShadeBrown = [102, 90, 100]
+
+LightStone = [219, 210, 193]
+ShadeStone = [138, 126, 114]
+
+LightRed = [222, 144, 116]
+ShadeRed = [176, 122, 95]
+
+LightRoof = [248, 180, 107]
+ShadeRoof = [154, 87, 94]
+
+LightMud = [216, 192, 132]
+ShadeMud = [164, 147, 139]
+
+LightBlue = [89, 174, 194]
+ShadeBlue = [76, 94, 134]
+
+LightGrass = [205, 225, 112]
+ShadeGrass = [135, 189, 140]
+
+LightForest = [52, 136, 102]
+ShadeForest = [55, 83, 97]
+
+LightSnow = [251, 255, 255]
+ShadeSnow = [138, 167, 199]
+
+LightSnowRoad = [209, 217, 219]
+ShadeSnowRoad = [159, 160, 165]
+
+LightWater = [191, 219, 230]
+ShadeWater = [157, 205, 209]
+
+LightDune = [223, 206, 179]
+ShadeDune = [163, 142, 105]
